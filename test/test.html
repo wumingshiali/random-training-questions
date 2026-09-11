@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <title>随机训练题高亮 —— 测试页</title>
+  <style>
+    table { border-collapse: collapse; }
+    td { border: 1px solid #ccc; padding: 6px 12px; }
+  </style>
+</head>
+<body>
+  <h1>随机训练题高亮测试页</h1>
+  <p>刷新页面应随机高亮下面某个符合条件的元素；点击工具栏按钮会重新随机。</p>
+
+  <h2>应被选中的元素</h2>
+  <ul>
+    <li><a href="https://codeforces.com/problemset/problem/1/A">Codeforces 1A（/problemset/problem/）</a></li>
+    <li><a href="/problemset/problem/1234/B">相对路径题目链接</a></li>
+    <li><a href="javascript:pm1(1001)">javascript:pm1(1001)</a></li>
+    <li><a href="#" onclick="pm1(2002)">onclick 调用 pm1(2002)</a></li>
+    <li><a href="https://example.com/problemset/problem/999/X">其他站点的 /problemset/problem/ 链接</a></li>
+  </ul>
+
+  <h2>一本通风格的 td 单元格</h2>
+  <table>
+    <tr>
+      <td onclick="pm1('4011')" style="cursor: pointer;">【GESP2306四级】幸运数</td>
+      <td onclick="pm1('4012')" style="cursor: pointer;">【GESP2306四级】进制转换</td>
+      <td>普通不可点击单元格</td>
+    </tr>
+  </table>
+
+  <h2>不应被选中的元素</h2>
+  <ul>
+    <li><a href="https://codeforces.com/">普通首页链接</a></li>
+    <li><a href="https://example.com/pm1">只是 URL 里带 pm1</a></li>
+    <li><a href="javascript:void(0)" onclick="other()">无关 JS 链接</a></li>
+    <li><span onclick="other()">无关 onclick</span></li>
+  </ul>
+</body>
+</html>
